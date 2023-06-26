@@ -19,7 +19,7 @@ namespace Proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            int x = 0;
         }
     }
 }
