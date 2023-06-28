@@ -104,6 +104,7 @@
     <None Include="Users.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Zapatería.db" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
