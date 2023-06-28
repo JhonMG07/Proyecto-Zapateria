@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    partial class Form2
+    partial class CRUD
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -54,7 +55,7 @@
             this.searchItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(799, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,9 +103,13 @@
             this.individualReadItem.Name = "individualReadItem";
             this.individualReadItem.Size = new System.Drawing.Size(180, 22);
             this.individualReadItem.Text = "INDIVIDUAL";
+            this.individualReadItem.Click += new System.EventHandler(this.individualReadItem_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnAnterior);
+            this.panel1.Controls.Add(this.btnSiguiente);
+            this.panel1.Controls.Add(this.btnPrimero);
             this.panel1.Location = new System.Drawing.Point(13, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 379);
@@ -112,7 +117,7 @@
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(13, 414);
+            this.btnAnterior.Location = new System.Drawing.Point(0, 356);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 23);
             this.btnAnterior.TabIndex = 2;
@@ -121,7 +126,7 @@
             // 
             // btnPrimero
             // 
-            this.btnPrimero.Location = new System.Drawing.Point(95, 414);
+            this.btnPrimero.Location = new System.Drawing.Point(81, 356);
             this.btnPrimero.Name = "btnPrimero";
             this.btnPrimero.Size = new System.Drawing.Size(75, 23);
             this.btnPrimero.TabIndex = 3;
@@ -130,7 +135,7 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(177, 414);
+            this.btnSiguiente.Location = new System.Drawing.Point(162, 356);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
             this.btnSiguiente.TabIndex = 4;
@@ -139,31 +144,29 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(712, 415);
+            this.btnSalir.Location = new System.Drawing.Point(713, 413);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // CRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(799, 439);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnSiguiente);
-            this.Controls.Add(this.btnPrimero);
-            this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "CRUD";
+            this.Text = "MENU CRUD";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

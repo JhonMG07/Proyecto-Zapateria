@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Proyecto
 {
-    public partial class Form2 : Form
+    public partial class CRUD : Form
     {
-        public Form2()
+        public CRUD()
         {
             InitializeComponent();
+        }
+
+        private void individualReadItem_Click(object sender, EventArgs e)
+        {
+            FormReadIndividual formReadIndividual = new FormReadIndividual();
+            formReadIndividual.MdiParent = this;
+            formReadIndividual.Show();
         }
     }
 }
