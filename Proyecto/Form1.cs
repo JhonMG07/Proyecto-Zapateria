@@ -23,7 +23,7 @@ namespace Proyecto
             // Verificar los datos de inicio de sesión
             if (VerificarCredenciales(usuario, contraseña))
             {
-                Form2 formulario2 = new Form2();
+                CRUD formulario2 = new CRUD();
                 formulario2.Show();
                 this.Hide();
             }
