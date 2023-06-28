@@ -13,6 +13,7 @@ namespace Proyecto
             InitializeComponent();
             string cadenaConexion = "Data Source=Users.db;Version=3;";
             conexion = new SQLiteConnection(cadenaConexion);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,7 +69,19 @@ namespace Proyecto
 
         return false; // Credenciales incorrectas
     }
- }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas cerrar la aplicación?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Verificar la respuesta del usuario
+            if (resultado == DialogResult.Yes)
+            {
+                // Cerrar la aplicación
+                Application.Exit();
+            }
+        }
+    }
 }
 
 

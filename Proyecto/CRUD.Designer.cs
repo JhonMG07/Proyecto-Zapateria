@@ -104,6 +104,7 @@
             this.searchItem.Name = "searchItem";
             this.searchItem.Size = new System.Drawing.Size(63, 20);
             this.searchItem.Text = "SEARCH";
+            this.searchItem.Click += new System.EventHandler(this.searchItem_Click);
             // 
             // panel1
             // 
@@ -150,6 +151,7 @@
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // CRUD
             // 
