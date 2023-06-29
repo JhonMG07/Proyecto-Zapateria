@@ -20,5 +20,18 @@ namespace Proyecto
         public string Descripcion { get; set; }
         public string Genero { get; set; }
 
+        public Zapato(int id, string tipo, int talla, float precio, string descripcion, string genero)
+        {
+            Id_zapato = id;
+            Tipo = tipo;
+            Talla = talla;
+            Precio = precio;
+            Descripcion = descripcion;
+            Genero = genero;
+        }
     }
+  
+
+        
+    
 }
