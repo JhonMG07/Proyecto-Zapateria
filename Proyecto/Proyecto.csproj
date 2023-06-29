@@ -79,6 +79,12 @@
     <Compile Include="CRUD.Designer.cs">
       <DependentUpon>CRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreate.Designer.cs">
+      <DependentUpon>FormCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReadIndividual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD.resx">
       <DependentUpon>CRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreate.resx">
+      <DependentUpon>FormCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReadIndividual.resx">
       <DependentUpon>FormReadIndividual.cs</DependentUpon>
