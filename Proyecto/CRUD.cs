@@ -17,8 +17,8 @@ namespace Proyecto
         private void individualReadItem_Click(object sender, EventArgs e)
         {
             FormReadIndividual formReadIndividual = new FormReadIndividual();
-            formReadIndividual.MdiParent = this;
             formReadIndividual.Show();
+            this.Hide();
         }
 
         private void searchItem_Click(object sender, EventArgs e)

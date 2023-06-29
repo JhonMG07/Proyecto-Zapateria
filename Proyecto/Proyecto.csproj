@@ -85,6 +85,8 @@
     <Compile Include="FormReadIndividual.Designer.cs">
       <DependentUpon>FormReadIndividual.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaDoblementeEnlazada.cs" />
+    <Compile Include="Nodo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search.cs">
@@ -94,7 +96,6 @@
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
     <Compile Include="Zapato.cs" />
-    <Compile Include="ZapatoContext.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

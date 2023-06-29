@@ -38,12 +38,8 @@
             this.deleteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAnterior = new System.Windows.Forms.Button();
-            this.btnSiguiente = new System.Windows.Forms.Button();
-            this.btnPrimero = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -109,40 +105,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnAnterior);
-            this.panel1.Controls.Add(this.btnSiguiente);
-            this.panel1.Controls.Add(this.btnPrimero);
             this.panel1.Location = new System.Drawing.Point(13, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(685, 379);
             this.panel1.TabIndex = 1;
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.Location = new System.Drawing.Point(0, 356);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(75, 23);
-            this.btnAnterior.TabIndex = 2;
-            this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.UseVisualStyleBackColor = true;
-            // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.Location = new System.Drawing.Point(162, 356);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
-            this.btnSiguiente.TabIndex = 4;
-            this.btnSiguiente.Text = "Siguiente";
-            this.btnSiguiente.UseVisualStyleBackColor = true;
-            // 
-            // btnPrimero
-            // 
-            this.btnPrimero.Location = new System.Drawing.Point(81, 356);
-            this.btnPrimero.Name = "btnPrimero";
-            this.btnPrimero.Size = new System.Drawing.Size(75, 23);
-            this.btnPrimero.TabIndex = 3;
-            this.btnPrimero.Text = "Primero";
-            this.btnPrimero.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
@@ -170,7 +136,6 @@
             this.Text = "MENU CRUD";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,9 +152,6 @@
         private System.Windows.Forms.ToolStripMenuItem searchItem;
         private System.Windows.Forms.ToolStripMenuItem individualReadItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnAnterior;
-        private System.Windows.Forms.Button btnPrimero;
-        private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnSalir;
     }
 }
