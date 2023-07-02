@@ -39,5 +39,19 @@ namespace Proyecto
                 Application.Exit();
             }
         }
+
+        private void generalReadItem_Click(object sender, EventArgs e)
+        {
+            FormRead readWindow = new FormRead();
+            readWindow.Show();
+            this.Hide();
+        }
+
+        private void deleteItem_Click(object sender, EventArgs e)
+        {
+            FormDelete readWindow = new FormDelete();
+            readWindow.Show();
+            this.Hide();
+        }
     }
 }

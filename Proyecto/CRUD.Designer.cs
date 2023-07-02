@@ -76,6 +76,7 @@
             this.generalReadItem.Name = "generalReadItem";
             this.generalReadItem.Size = new System.Drawing.Size(137, 22);
             this.generalReadItem.Text = "GENERAL";
+            this.generalReadItem.Click += new System.EventHandler(this.generalReadItem_Click);
             // 
             // individualReadItem
             // 
@@ -95,6 +96,7 @@
             this.deleteItem.Name = "deleteItem";
             this.deleteItem.Size = new System.Drawing.Size(57, 20);
             this.deleteItem.Text = "DELETE";
+            this.deleteItem.Click += new System.EventHandler(this.deleteItem_Click);
             // 
             // searchItem
             // 
