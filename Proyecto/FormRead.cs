@@ -57,7 +57,7 @@ namespace Proyecto
             else
             {
                 // No hay opción seleccionada
-                MessageBox.Show("Seleccione al menos una opción.", "Advertencia");
+                MessageBox.Show("Seleccione al menos una opción!", "Advertencia");
             }
 
         }
