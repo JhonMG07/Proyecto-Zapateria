@@ -5,52 +5,44 @@ using System;
 
 namespace Proyecto
 {
-    public class ListaDoblementeEnlazada<T>
+    public class ListaDoblementeEnlazada
     {
-        private Nodo<T> cabeza;
-        private Nodo<T> cola;
-        private int count;
-
-        public int Count
-        {
-            get { return count; }
-        }
+        public Nodo primero;
+        public Nodo ultimo;
 
         public ListaDoblementeEnlazada()
         {
-            cabeza = null;
-            cola = null;
-            count = 0;
+            this.primero = null;
+            this.ultimo = null;
         }
-
-        public void AddLast(T valor)
+        //Agregar el último nodo a la lista
+        public void agregarUltimoDato(int id_zapato)
         {
-            Nodo<T> nuevoNodo = new Nodo<T>(valor);
-
-            if (cabeza == null)
+            Nodo nuevoNodo = new Nodo(id_zapato);
+            if (primero == null)
             {
-                cabeza = nuevoNodo;
-                cola = nuevoNodo;
+                primero = nuevoNodo;
+                ultimo = nuevoNodo;
             }
             else
             {
-                cola.Siguiente = nuevoNodo;
-                nuevoNodo.Anterior = cola;
-                cola = nuevoNodo;
+                ultimo.siguiente = nuevoNodo;
+                nuevoNodo.anterior = ultimo;
+                ultimo = nuevoNodo;
             }
-
-            count++;
         }
-
-        public IEnumerable<T> GetEnumerator()
+        public Nodo obtenerNodoPorId(int id_zapato)
         {
-            Nodo<T> nodoActual = cabeza;
-
+            Nodo nodoActual = primero;
             while (nodoActual != null)
             {
-                yield return nodoActual.Valor;
-                nodoActual = nodoActual.Siguiente;
+                if (nodoActual.id_zapato == id_zapato)
+                {
+                    return nodoActual;
+                }
+                nodoActual = nodoActual.siguiente;
             }
+            return null;
         }
     }
 }

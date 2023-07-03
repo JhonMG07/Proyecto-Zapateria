@@ -39,11 +39,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(115, 321);
+            this.button1.Location = new System.Drawing.Point(115, 281);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Iniciar Sesion";
+            this.button1.Text = "Iniciar Sesión";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -56,7 +56,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(115, 245);
+            this.textBox2.Location = new System.Drawing.Point(115, 230);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(103, 20);
@@ -65,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 210);
+            this.label1.Location = new System.Drawing.Point(129, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 3;
@@ -105,7 +105,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "LOGIN";
             this.ResumeLayout(false);
             this.PerformLayout();
 

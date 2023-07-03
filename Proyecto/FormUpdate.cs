@@ -20,6 +20,7 @@ namespace Proyecto
             conexion = new SQLiteConnection(cadenaConexion);
             bindingSource = new BindingSource();
             dataGridViewUpdate.DataSource = bindingSource;
+            this.StartPosition = FormStartPosition.CenterScreen;
             LoadZapatosData();
         }
 

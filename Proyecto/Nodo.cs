@@ -2,17 +2,17 @@
 
 namespace Proyecto
 {
-    class Nodo<T>
+    public class Nodo
     {
-        public T Valor { get; set; }
-        public Nodo<T> Siguiente { get; set; }
-        public Nodo<T> Anterior { get; set; }
+        public int id_zapato;
+        public Nodo siguiente;
+        public Nodo anterior;
 
-        public Nodo(T valor)
+        public Nodo(int id_zapato)
         {
-            Valor = valor;
-            Siguiente = null;
-            Anterior = null;
+            this.id_zapato = id_zapato;
+            this.siguiente = null;
+            this.anterior = null;
         }
     }
 }

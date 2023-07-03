@@ -39,7 +39,7 @@
             // 
             // searchItem
             // 
-            this.searchItem.Location = new System.Drawing.Point(59, 210);
+            this.searchItem.Location = new System.Drawing.Point(30, 108);
             this.searchItem.Name = "searchItem";
             this.searchItem.Size = new System.Drawing.Size(119, 23);
             this.searchItem.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // textBoxNombreZapato
             // 
-            this.textBoxNombreZapato.Location = new System.Drawing.Point(59, 184);
+            this.textBoxNombreZapato.Location = new System.Drawing.Point(30, 82);
             this.textBoxNombreZapato.Name = "textBoxNombreZapato";
             this.textBoxNombreZapato.Size = new System.Drawing.Size(119, 20);
             this.textBoxNombreZapato.TabIndex = 1;
@@ -57,7 +57,7 @@
             // dataGridViewZapatos
             // 
             this.dataGridViewZapatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewZapatos.Location = new System.Drawing.Point(193, 119);
+            this.dataGridViewZapatos.Location = new System.Drawing.Point(164, 21);
             this.dataGridViewZapatos.Name = "dataGridViewZapatos";
             this.dataGridViewZapatos.Size = new System.Drawing.Size(535, 161);
             this.dataGridViewZapatos.TabIndex = 2;
@@ -65,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 151);
+            this.label1.Location = new System.Drawing.Point(27, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 13);
             this.label1.TabIndex = 3;
@@ -73,9 +73,9 @@
             // 
             // regresarBtn
             // 
-            this.regresarBtn.Location = new System.Drawing.Point(653, 286);
+            this.regresarBtn.Location = new System.Drawing.Point(30, 145);
             this.regresarBtn.Name = "regresarBtn";
-            this.regresarBtn.Size = new System.Drawing.Size(75, 23);
+            this.regresarBtn.Size = new System.Drawing.Size(119, 23);
             this.regresarBtn.TabIndex = 4;
             this.regresarBtn.Text = "Regresar";
             this.regresarBtn.UseVisualStyleBackColor = true;
@@ -85,7 +85,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 432);
+            this.ClientSize = new System.Drawing.Size(710, 201);
+            this.ControlBox = false;
             this.Controls.Add(this.regresarBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewZapatos);
@@ -95,7 +96,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Search";
-            this.Text = "Search";
+            this.Text = "SEARCH";
             this.Load += new System.EventHandler(this.Search_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZapatos)).EndInit();
             this.ResumeLayout(false);

@@ -13,10 +13,13 @@ namespace Proyecto
 {
     public partial class FormDelete : Form
     {
+        private BindingSource bindingSource;
         public FormDelete()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            bindingSource = new BindingSource();
+            dataGridView1.DataSource = bindingSource;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -50,7 +50,7 @@
             // 
             // buttonAceptar
             // 
-            this.buttonAceptar.Location = new System.Drawing.Point(26, 310);
+            this.buttonAceptar.Location = new System.Drawing.Point(12, 310);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             // buttonRegresar
             // 
-            this.buttonRegresar.Location = new System.Drawing.Point(167, 310);
+            this.buttonRegresar.Location = new System.Drawing.Point(185, 310);
             this.buttonRegresar.Name = "buttonRegresar";
             this.buttonRegresar.Size = new System.Drawing.Size(75, 23);
             this.buttonRegresar.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.dataGridViewCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCreate.Location = new System.Drawing.Point(266, 12);
             this.dataGridViewCreate.Name = "dataGridViewCreate";
-            this.dataGridViewCreate.Size = new System.Drawing.Size(522, 343);
+            this.dataGridViewCreate.Size = new System.Drawing.Size(568, 343);
             this.dataGridViewCreate.TabIndex = 2;
             // 
             // groupBox1
@@ -198,7 +198,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 367);
+            this.ClientSize = new System.Drawing.Size(846, 367);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewCreate);
             this.Controls.Add(this.buttonRegresar);

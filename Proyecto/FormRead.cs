@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Proyecto
 {
-    public partial class FormRead : Form
+    public partial class READ : Form
     {
         private SQLiteConnection conexion;
         List<Zapato> zapatos;
-        public FormRead()
+        public READ()
         {
             InitializeComponent();
             string cadenaConexion = "Data Source=Zapatería.db;Version=3;";

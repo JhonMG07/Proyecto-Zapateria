@@ -17,27 +17,81 @@ namespace Proyecto
     public partial class FormReadIndividual : Form
     {
         private SQLiteConnection conexion;
-        //private ListaDoblementeEnlazada<Zapato> listaZapatos;
-        private LinkedList<Zapato> listaZapatos;
+        private ListaDoblementeEnlazada zapatos;
+        private int indiceActual;
+        private bool columnasAgregadas;
         public FormReadIndividual()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             //Crear la conexión con SQLite
             string cadenaConexion = "Data Source=Zapatería.db;Version=3;";
             conexion = new SQLiteConnection(cadenaConexion);
 
-            listaZapatos = new LinkedList<Zapato>();
-            CargarZapatosDesdeBD();
+            zapatos = new ListaDoblementeEnlazada();
+            indiceActual = -1;
+            columnasAgregadas = false;
+            cargarZapatosDesdeBD();
+            mostrarPrimerRegistroEnDataGridView();
+        }
 
-            this.StartPosition = FormStartPosition.CenterScreen;
-        }
-        // Método para cargar los zapatos desde la base de datos y llenar la lista
-        private void FormReadIndividual_Load(object sender, EventArgs e)
+        private void mostrarPrimerRegistroEnDataGridView()
         {
-            dataGridViewIndividual.DataSource = listaZapatos.ToList();
+            // Mostrar el primer registro en el DataGridView
+            if (zapatos.primero != null)
+            {
+                indiceActual = zapatos.primero.id_zapato;
+                mostrarRegistroEnDataGridView(indiceActual);
+            }
         }
-        // Método para cargar los zapatos desde la base de datos y llenar la lista
-        private void CargarZapatosDesdeBD()
+
+        private void mostrarRegistroEnDataGridView(int indiceActual)
+        {
+            try
+            {
+                // Limpiar el DataGridView
+                dataGridViewIndividual.Rows.Clear();
+
+                // Abrir la conexión a la base de datos
+                conexion.Open();
+
+                // Consulta SQL para obtener el zapato por su ID
+                string consulta = $"SELECT * FROM Zapato WHERE id_zapato = {indiceActual}";
+
+                // Crear el comando SQL
+                SQLiteCommand comando = new SQLiteCommand(consulta, conexion);
+
+                // Ejecutar el comando y obtener un lector de datos
+                SQLiteDataReader lector = comando.ExecuteReader();
+
+                // Verificar si se encontró un registro
+                if (lector.Read())
+                {
+                    int id = Convert.ToInt32(lector["id_zapato"]);
+                    string tipo = lector["tipo"].ToString();
+                    int talla = Convert.ToInt32(lector["talla"]);
+                    float precio = Convert.ToSingle(lector["precio"]);
+                    string descripcion = lector["descripcion"].ToString();
+                    string genero = lector["genero"].ToString();
+
+                    // Agregar el registro al DataGridView
+                    dataGridViewIndividual.Rows.Add(id, tipo, talla, precio, descripcion, genero);
+                }
+
+                // Cerrar el lector de datos
+                lector.Close();
+
+                // Cerrar la conexión a la base de datos
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void cargarZapatosDesdeBD()
         {
             try
             {
@@ -53,6 +107,20 @@ namespace Proyecto
                 // Ejecutar el comando y obtener un lector de datos
                 SQLiteDataReader lector = comando.ExecuteReader();
 
+                // Verificar si las columnas ya se han agregado
+                if (!columnasAgregadas)
+                {
+                    // Agregar las columnas al DataGridView
+                    dataGridViewIndividual.Columns.Add("id", "ID");
+                    dataGridViewIndividual.Columns.Add("tipo", "Tipo");
+                    dataGridViewIndividual.Columns.Add("talla", "Talla");
+                    dataGridViewIndividual.Columns.Add("precio", "Precio");
+                    dataGridViewIndividual.Columns.Add("descripcion", "Descripción");
+                    dataGridViewIndividual.Columns.Add("genero", "Género");
+
+                    columnasAgregadas = true;
+                }
+
                 // Recorrer los resultados y agregarlos a la lista de zapatos
                 while (lector.Read())
                 {
@@ -64,7 +132,7 @@ namespace Proyecto
                     string genero = lector["genero"].ToString();
 
                     Zapato zapato = new Zapato(id, tipo, talla, precio, descripcion, genero);
-                    listaZapatos.AddLast(zapato);
+                    zapatos.agregarUltimoDato(zapato.Id_zapato);
                 }
 
                 // Cerrar el lector de datos
@@ -81,17 +149,47 @@ namespace Proyecto
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-
+            Nodo nodoActual = zapatos.obtenerNodoPorId(indiceActual);
+            if (nodoActual.anterior != null && nodoActual.anterior != null)
+            {
+                indiceActual = nodoActual.anterior.id_zapato;
+                mostrarRegistroEnDataGridView(indiceActual);
+            }
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-
+            Nodo nodoActual = zapatos.obtenerNodoPorId(indiceActual);
+            if (nodoActual.siguiente != null && nodoActual.siguiente != null)
+            {
+                indiceActual = nodoActual.siguiente.id_zapato;
+                mostrarRegistroEnDataGridView(indiceActual);
+            }
         }
 
         private void btnPrimero_Click(object sender, EventArgs e)
         {
+            if (zapatos.primero != null)
+            {
+                indiceActual = zapatos.primero.id_zapato;
+                mostrarRegistroEnDataGridView(indiceActual);
+            }
+        }
 
+        private void btnÚltimo_Click(object sender, EventArgs e)
+        {
+            if (zapatos.ultimo != null)
+            {
+                indiceActual = zapatos.ultimo.id_zapato;
+                mostrarRegistroEnDataGridView(indiceActual);
+            }
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            CRUD backCRUD = new CRUD();
+            backCRUD.Show();
+            this.Close();
         }
     }
 }

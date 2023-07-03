@@ -42,7 +42,7 @@ namespace Proyecto
 
         private void generalReadItem_Click(object sender, EventArgs e)
         {
-            FormRead readWindow = new FormRead();
+            READ readWindow = new READ();
             readWindow.Show();
             this.Hide();
         }

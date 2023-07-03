@@ -32,6 +32,8 @@
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnPrimero = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
+            this.btnÚltimo = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIndividual)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,12 +42,12 @@
             this.dataGridViewIndividual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewIndividual.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewIndividual.Name = "dataGridViewIndividual";
-            this.dataGridViewIndividual.Size = new System.Drawing.Size(935, 74);
+            this.dataGridViewIndividual.Size = new System.Drawing.Size(645, 74);
             this.dataGridViewIndividual.TabIndex = 0;
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(347, 92);
+            this.btnAnterior.Location = new System.Drawing.Point(114, 92);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 23);
             this.btnAnterior.TabIndex = 1;
@@ -55,7 +57,7 @@
             // 
             // btnPrimero
             // 
-            this.btnPrimero.Location = new System.Drawing.Point(429, 92);
+            this.btnPrimero.Location = new System.Drawing.Point(12, 92);
             this.btnPrimero.Name = "btnPrimero";
             this.btnPrimero.Size = new System.Drawing.Size(75, 23);
             this.btnPrimero.TabIndex = 2;
@@ -65,7 +67,7 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(511, 92);
+            this.btnSiguiente.Location = new System.Drawing.Point(195, 92);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
             this.btnSiguiente.TabIndex = 3;
@@ -73,11 +75,34 @@
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
+            // btnÚltimo
+            // 
+            this.btnÚltimo.Location = new System.Drawing.Point(291, 92);
+            this.btnÚltimo.Name = "btnÚltimo";
+            this.btnÚltimo.Size = new System.Drawing.Size(75, 23);
+            this.btnÚltimo.TabIndex = 4;
+            this.btnÚltimo.Text = "Último";
+            this.btnÚltimo.UseVisualStyleBackColor = true;
+            this.btnÚltimo.Click += new System.EventHandler(this.btnÚltimo_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(582, 92);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresar.TabIndex = 5;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // FormReadIndividual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 129);
+            this.ClientSize = new System.Drawing.Size(669, 129);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.btnÚltimo);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnPrimero);
             this.Controls.Add(this.btnAnterior);
@@ -85,8 +110,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormReadIndividual";
-            this.Text = "FormReadIndividual";
-            this.Load += new System.EventHandler(this.FormReadIndividual_Load);
+            this.Text = "READ INDIVIDUAL";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIndividual)).EndInit();
             this.ResumeLayout(false);
 
@@ -98,5 +122,7 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimero;
         private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.Button btnÚltimo;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

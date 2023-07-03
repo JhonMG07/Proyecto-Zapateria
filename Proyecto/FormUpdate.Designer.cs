@@ -190,7 +190,7 @@ namespace Proyecto
             // 
             // buttonRegresar
             // 
-            this.buttonRegresar.Location = new System.Drawing.Point(167, 332);
+            this.buttonRegresar.Location = new System.Drawing.Point(185, 332);
             this.buttonRegresar.Name = "buttonRegresar";
             this.buttonRegresar.Size = new System.Drawing.Size(75, 23);
             this.buttonRegresar.TabIndex = 5;
@@ -200,7 +200,7 @@ namespace Proyecto
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(26, 332);
+            this.buttonActualizar.Location = new System.Drawing.Point(12, 332);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
             this.buttonActualizar.TabIndex = 4;
@@ -213,6 +213,7 @@ namespace Proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 374);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewUpdate);
             this.Controls.Add(this.buttonRegresar);
