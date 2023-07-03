@@ -41,11 +41,10 @@ namespace Proyecto
                 {
                     command.Parameters.AddWithValue("@IdZapato", zapatoId);
                     DialogResult result = MessageBox.Show($"¿Está seguro de eliminar el zapato ID: {zapatoId}?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    if (rowsAffected > 0 && result == DialogResult.Yes)
+                    
+                    if (result == DialogResult.Yes)
                     {
+                        int rowsAffected = command.ExecuteNonQuery();
                         MessageBox.Show("Zapato eliminado exitosamente.");
                     }
                     else
