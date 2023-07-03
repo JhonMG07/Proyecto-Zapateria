@@ -61,6 +61,7 @@
             this.createItem.Name = "createItem";
             this.createItem.Size = new System.Drawing.Size(59, 20);
             this.createItem.Text = "CREATE";
+            this.createItem.Click += new System.EventHandler(this.createItem_Click);
             // 
             // readItem
             // 
@@ -90,6 +91,7 @@
             this.updateItem.Name = "updateItem";
             this.updateItem.Size = new System.Drawing.Size(61, 20);
             this.updateItem.Text = "UPDATE";
+            this.updateItem.Click += new System.EventHandler(this.updateItem_Click);
             // 
             // deleteItem
             // 

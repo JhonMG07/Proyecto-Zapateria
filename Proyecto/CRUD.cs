@@ -53,5 +53,19 @@ namespace Proyecto
             readWindow.Show();
             this.Hide();
         }
+
+        private void createItem_Click(object sender, EventArgs e)
+        {
+            FormCreate createWindow = new FormCreate();
+            createWindow.Show();
+            this.Hide();
+        }
+
+        private void updateItem_Click(object sender, EventArgs e)
+        {
+            FormUpdate updateWindow = new FormUpdate();
+            updateWindow.Show();
+            this.Hide();
+        }
     }
 }
